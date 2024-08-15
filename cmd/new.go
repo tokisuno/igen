@@ -21,12 +21,18 @@ var newCmd = &cobra.Command{
         var list []string
 
         dir, _ := os.Executable()
-        fmt.Println("CWD:", filepath.Dir(dir))
+        fmt.Println("Executable:", filepath.Dir(dir))
 
         entries, err := os.ReadDir(filepath.Dir(dir) + "/cmd/templates")
         if err != nil {
             log.Fatal(err)            
         }
+        cwd, err := os.Getwd()
+        if err != nil {
+            log.Fatal(err)
+        }
+        fmt.Println(cwd)
+
         for _, e := range entries {
             fmt.Println(e.Name())
             list = append(list, e.Name())
