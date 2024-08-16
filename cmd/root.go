@@ -54,7 +54,7 @@ Generate a .gitignore file for the project you're working on!
 }
 
 func newGitignore(dat []byte, cwd string, ow bool) {
-    fmt.Printf("%t", ow)
+    fmt.Printf("%t\n", ow)
     f, err := os.Create(cwd + "/.gitignore")
     check(err)
 
@@ -70,7 +70,7 @@ func newGitignore(dat []byte, cwd string, ow bool) {
 }
 
 func appendToGitignore(dat []byte, cwd string, ow bool) {
-    fmt.Printf("%t", ow)
+    fmt.Printf("%t\n", ow)
     f, err := os.OpenFile(cwd + "/.gitignore", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
     check(err)
 
