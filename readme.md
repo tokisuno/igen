@@ -19,6 +19,10 @@ Igen checks if there's a `.gitignore` file already in the dir you're in. If ther
 * Go
 
 ## Todo
-- [ ] Check CWD if `.gitignore` exists.
-    - [ ] If exists, append file contents of template `.gitignore` to existing file
-    - [ ] Else, copy template `.gitignore` from executable dir into cwd.
+- [ ] Overwrite flag
+    - [ ] If true, rename existing `.gitignore` to `.backup.gitignore`
+        * create new `.gitignore` file
+    - [ ] If false, append data string to existing `.gitignore`
+- [x] Check CWD if `.gitignore` exists.
+    - [x] If exists, append file contents of template `.gitignore` to existing file
+    - [x] Else, copy template `.gitignore` from executable dir into cwd.
