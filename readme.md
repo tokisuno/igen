@@ -19,6 +19,7 @@ Igen checks if there's a `.gitignore` file already in the dir you're in. If ther
 * Go
 
 ## Todo
+- [ ] Clear ignored files cwd from git cache recursively
 - [ ] Overwrite flag
     - [ ] If true, rename existing `.gitignore` to `.backup.gitignore`
         * create new `.gitignore` file
